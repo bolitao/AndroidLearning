@@ -7,9 +7,14 @@
     tools:context=".SecondActivity">
 
     <Button
-        android:id="@+id/button_2"
+        android:id="@+id/button_receiveData"
+        android:layout_width="265dp"
+        android:layout_height="52dp"
+        android:text="传递的数据" />
+    <Button
+        android:id="@+id/button_returnDataInSecondActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button 2" />
+        android:text="返回数据" />
 
 </android.support.constraint.ConstraintLayout>

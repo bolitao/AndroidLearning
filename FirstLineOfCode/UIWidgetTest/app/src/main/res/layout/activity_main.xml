@@ -1,64 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/text"
+        android:id="@+id/text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello" />
+        android:layout_gravity="center"
+        android:text="This is TextView"
+        android:textColor="#ABCDEF"
+        android:textSize="24sp" />
 
     <Button
-        android:id="@+id/button_1"
+        android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button 1" />
-
-    <Button
-        android:id="@+id/button_quit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="finish()"
+        android:text="Button"
         android:textAllCaps="false" />
 
     <Button
-        android:id="@+id/button_explicit_intent"
+        android:id="@+id/button_controlProgressBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="显式 Intent"
+        android:text="显示/隐藏 ProgressBar"
         android:textAllCaps="false" />
 
     <Button
-        android:id="@+id/button_implicit_intent"
+        android:id="@+id/button_addProgress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="隐式 Intent"
+        android:text="增加进度条的百分比" />
+
+    <Button
+        android:id="@+id/alertDialogButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="AlertDialog"
         android:textAllCaps="false" />
 
     <Button
-        android:id="@+id/button_more_intent_usage"
+        android:id="@+id/progressDialogButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="更多隐式 Intent 用法（浏览器）"
+        android:text="ProgressDialog"
         android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/button_dial"
+    <EditText
+        android:id="@+id/edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="拨号" />
+        android:hint="Type something here"
+        android:maxLines="3" />
 
-    <Button
-        android:id="@+id/button_deliverData"
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="传递数据" />
+        android:max="100" />
 
-    <Button
-        android:id="@+id/button_returnDataInFirstActivity"
-        android:text="返回数据"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tom" />
 </LinearLayout>

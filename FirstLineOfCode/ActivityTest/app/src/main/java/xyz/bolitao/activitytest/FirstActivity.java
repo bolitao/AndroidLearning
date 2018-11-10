@@ -2,8 +2,10 @@ package xyz.bolitao.activitytest;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -32,6 +34,19 @@ public class FirstActivity extends AppCompatActivity {
             default:
         }
         return true;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        switch (requestCode) {
+            case 1:
+                if (resultCode == RESULT_OK) {
+                    String returnData = data.getStringExtra("data_return");
+                    Log.d("FirstActivity", "onActivityResult: " + returnData);
+                }
+                break;
+            default:
+        }
     }
 
     @Override
@@ -80,8 +95,7 @@ public class FirstActivity extends AppCompatActivity {
         Button buttonMoreIntentUsage = (Button) findViewById(R.id.button_more_intent_usage);
         /*
          调用浏览器
-         TODO: 如何使用 Chrome custom tabs？
-
+         TODO: 使用 Chrome Custom Tabs
          在 Manifest 文件中配置 ThirdActivity 时响应的 data 类型是严格对应的，比如 Uri.parse("http://bolitao.xyz") 就得写 http
          如果链接换成了 https://* 则写成 <data android:scheme="https" />
          把这两个都写上去也没问题
@@ -102,6 +116,27 @@ public class FirstActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_DIAL);
                 intent.setData(Uri.parse("tel:123321"));
+                startActivity(intent);
+            }
+        });
+
+        Button buttonDataDeliver = (Button) findViewById(R.id.button_deliverData);
+        buttonDataDeliver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+                String data = "这是 FirstActivity 通过 Intent 传递的数据";
+                intent.putExtra("extra_data", data);
+                startActivity(intent);
+            }
+        });
+
+        Button buttonReturnData = findViewById(R.id.button_returnDataInFirstActivity);
+        buttonReturnData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+                startActivityForResult(intent, 1);
             }
         });
     }
