@@ -6,21 +6,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+/**
+ * @author Boli Tao
+ */
+public class RelativeLayoutActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Button launchRelativeActivityButton = (Button) (findViewById(R.id.launchRelativeActivityButton));
-        launchRelativeActivityButton.setOnClickListener(this);
+        setContentView(R.layout.activity_relative_layout);
+        Button frameLayoutButton = findViewById(R.id.frameLayoutButton);
+        frameLayoutButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.launchRelativeActivityButton:
-                Intent intent = new Intent(getApplicationContext(), RelativeLayoutActivity.class);
+            case R.id.frameLayoutButton:
+                Intent intent = new Intent(RelativeLayoutActivity.this, FrameLayoutTest.class);
                 startActivity(intent);
                 break;
             default:
