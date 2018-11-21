@@ -85,17 +85,17 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"></Spinner>
 
-    <Button
-        android:id="@+id/clickButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/spinner"
-        android:text="点击" />
+    <!--<Button-->
+    <!--android:id="@+id/clickButton"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/spinner"-->
+    <!--android:text="点击" />-->
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/clickButton"
-        android:src="@drawable/a" />
+    <!--<ImageView-->
+    <!--android:id="@+id/imageView"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/clickButton"-->
+    <!--android:src="@drawable/a" />-->
 </LinearLayout>
