@@ -16,7 +16,7 @@ import android.widget.Toast;
 /**
  * @author Boli Tao
  */
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
     private Spinner spinner;
     private Button clickButton;
     private ImageView imageView;
@@ -48,10 +48,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onNothingSelected(AdapterView<?> parent) {
             }
         });
-//        clickButton = findViewById(R.id.clickButton);
-//        clickButton.setOnClickListener(this);
-//        imageView = findViewById(R.id.imageView);
-//        imageView.setOnClickListener(this);
         reading = findViewById(R.id.reading);
         exercise = findViewById(R.id.exercise);
         male = findViewById(R.id.male);
@@ -82,22 +78,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
         });
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.checkBoxGroup:
-                Toast.makeText(getApplicationContext(), "Hello world", Toast.LENGTH_SHORT).show();
-                break;
-//            case R.id.clickButton:
-//                Toast.makeText(getApplicationContext(), "You clicked \"点击\" button.", Toast.LENGTH_SHORT).show();
-//                break;
-//            case R.id.imageView:
-//                Toast.makeText(getApplicationContext(), "You clicked image.", Toast.LENGTH_SHORT).show();
-//                break;
-            default:
-                break;
-        }
     }
 }

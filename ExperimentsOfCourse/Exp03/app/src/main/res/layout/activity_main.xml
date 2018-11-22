@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/likeChoose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:text="爱好选择" />
+        android:layout_marginStart="8dp"
+        android:text="爱好选择"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:orientation="horizontal">
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/likeChoose">
 
         <CheckBox
             android:id="@+id/reading"
@@ -40,18 +46,21 @@
         android:id="@+id/sexChoose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/checkBoxGroup"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
-        android:text="性别选择" />
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="性别选择"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <RadioGroup
         android:id="@+id/radioButtonGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/sexChoose"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal">
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sexChoose">
 
         <RadioButton
             android:id="@+id/male"
@@ -72,18 +81,20 @@
         android:id="@+id/placeChoose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/radioButtonGroup"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
-        android:text="地址选择" />
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="地址选择"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioButtonGroup" />
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/placeChoose"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"></Spinner>
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/placeChoose"></Spinner>
 
     <!--<Button-->
     <!--android:id="@+id/clickButton"-->
@@ -98,4 +109,4 @@
     <!--android:layout_height="wrap_content"-->
     <!--android:layout_below="@id/clickButton"-->
     <!--android:src="@drawable/a" />-->
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>
