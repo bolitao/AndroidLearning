@@ -32,20 +32,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         spinner = findViewById(R.id.spinner);
-//        ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(this, R.array.spinner, android.R.layout.simple_spinner_item);
-//        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        spinner.setAdapter(arrayAdapter);
-        ArrayAdapter<String> addressAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, address);
-        addressAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(addressAdapter);
+        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, address);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(arrayAdapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(MainActivity.this, "你选择的是" + address[position], Toast.LENGTH_SHORT).show();
+
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
         reading = findViewById(R.id.reading);
@@ -71,10 +69,11 @@ public class MainActivity extends AppCompatActivity {
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
+                String text = "";
                 if (checkedId == male.getId()) {
-                    Toast.makeText(MainActivity.this, "的性别是：" + male.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "性别男", Toast.LENGTH_SHORT).show();
                 } else if (checkedId == female.getId()) {
-                    Toast.makeText(MainActivity.this, "你的性别是：" + female.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "性别女", Toast.LENGTH_SHORT).show();
                 }
             }
         });
