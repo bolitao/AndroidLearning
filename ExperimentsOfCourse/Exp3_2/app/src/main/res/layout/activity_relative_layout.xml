@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RelativeLayoutActivity">
+
+    <TextView
+        android:id="@+id/relativeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="演示示例：RelativeLayout" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeText"
+        android:layout_marginTop="20dp"
+        android:text="用户名：" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeText"
+        android:layout_toRightOf="@id/username"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="20dp"
+        android:text="密码：" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username"
+        android:layout_toRightOf="@id/password"
+        android:inputType="textPassword" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp">
+
+        <Button
+            android:id="@+id/cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/cancle"
+            android:text="下一步" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/linearLayoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:text="LinearLayout 示例"
+        android:textAllCaps="false" />
+    <!--<TextView-->
+    <!--android:id="@+id/text"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:text="演示示例：RelativeLayout" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/username"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/text"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:text="用户名：" />-->
+
+    <!--<EditText-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/text"-->
+    <!--android:layout_toRightOf="@id/username"-->
+    <!--android:inputType="textPassword" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/password"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/username"-->
+    <!--android:layout_marginTop="15dp"-->
+
+    <!--android:text="密码：" />-->
+
+    <!--<EditText-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/username"-->
+    <!--android:layout_toRightOf="@id/password" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/nextButton"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/password"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:text="下一步" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/calcleButton"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/password"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:layout_marginRight="5dp"-->
+    <!--android:layout_toLeftOf="@id/nextButton"-->
+    <!--android:text="取消" />-->
+
+    <!--<Button-->
+    <!--android:id="@+id/linearLayoutButton"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:text="LinearLayout 示例"-->
+    <!--android:textAllCaps="false" />-->
+</RelativeLayout>
