@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(MainActivity.this, "您选择的布局是" + address[position], Toast.LENGTH_SHORT).show();
+
             }
 
             @Override
@@ -71,9 +71,9 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 String text = "";
                 if (checkedId == male.getId()) {
-                    Toast.makeText(MainActivity.this, "性别" + male.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "性别男", Toast.LENGTH_SHORT).show();
                 } else if (checkedId == female.getId()) {
-                    Toast.makeText(MainActivity.this, "性别" + female.getText(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "性别女", Toast.LENGTH_SHORT).show();
                 }
             }
         });
