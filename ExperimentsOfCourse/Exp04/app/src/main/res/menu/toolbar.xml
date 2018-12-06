@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/loginMenu"
+        android:title="登录"
+        app:showAsAction="always|withText" />
+
+    <item
+        android:id="@+id/chooseMenu"
+        android:title="选择"
+        app:showAsAction="always|withText"/>
+
+    <item
+        android:id="@+id/exitMenu"
+        android:icon="@drawable/exit"
+        android:title="Exit"
+        app:showAsAction="always|withText" />
+</menu>
