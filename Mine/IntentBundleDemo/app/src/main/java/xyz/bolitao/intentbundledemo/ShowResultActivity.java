@@ -15,10 +15,8 @@ public class ShowResultActivity extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         Person person = null;
-        String address = null;
         try {
             person = (Person) bundle.getSerializable("person");
-            address = bundle.getString("province");
         } catch (NullPointerException e) {
             e.printStackTrace();
         }
@@ -27,7 +25,7 @@ public class ShowResultActivity extends AppCompatActivity {
         if (person != null) {
             text += "用户名：" + person.getUsername() + "\n";
             text += "密码:" + person.getPassword() + "\n";
-            text += "地址：" + address;
+            text += "地址：" + person.getAddress();
         }
         textView.setText(text);
     }

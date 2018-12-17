@@ -23,7 +23,6 @@ public class SelectAddressActivity extends ListActivity {
         Intent intent = getIntent();
         Bundle bundle = new Bundle();
         bundle.putString("province", addresses[position]);
-//        intent.putExtras(bundle);
         intent.putExtras(bundle);
         this.setResult(RESULT_OK, intent);
         finish();

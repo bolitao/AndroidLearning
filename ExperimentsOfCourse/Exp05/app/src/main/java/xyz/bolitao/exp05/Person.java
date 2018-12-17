@@ -5,6 +5,15 @@ import java.io.Serializable;
 public class Person implements Serializable {
     private String userName;
     private String userPassword;
+    private String address;
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
     public String getUserName() {
         return userName;

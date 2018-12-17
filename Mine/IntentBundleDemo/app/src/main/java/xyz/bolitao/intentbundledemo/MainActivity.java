@@ -38,10 +38,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Person person = new Person();
                 person.setUsername(usernameEditText.getText().toString());
                 person.setPassword(passwordEditText.getText().toString());
+                person.setAddress(addressText.getText().toString());
                 Intent intent = new Intent(MainActivity.this, ShowResultActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("person", person);
-                bundle.putString("province", addressText.getText().toString());
+//                bundle.putString("province", addressText.getText().toString());
                 intent.putExtras(bundle);
                 startActivity(intent);
                 break;
