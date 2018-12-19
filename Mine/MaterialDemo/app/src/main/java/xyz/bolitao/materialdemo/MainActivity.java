@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             new Fruit("Cherry", R.drawable.cherry), new Fruit("Mango", R.drawable.mango)};
     private List<Fruit> fruitList = new ArrayList<>();
     private FruitAdapter fruitAdapter;
-    FloatingActionButton floatingActionButton;
+    private FloatingActionButton floatingActionButton;
     private SwipeRefreshLayout swipeRefreshLayout;
 
     /*

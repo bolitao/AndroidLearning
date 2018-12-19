@@ -98,7 +98,9 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> 
                 mContext.startActivity(intent);
             }
         });
-        return new ViewHolder(view);
+        // TODO: 为什么下面这行注释掉的 return 语句产生了 bug
+//        return new ViewHolder(view);
+        return holder;
     }
 
     @Override
