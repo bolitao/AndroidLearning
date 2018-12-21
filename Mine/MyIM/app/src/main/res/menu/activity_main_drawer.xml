@@ -3,29 +3,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group
+        android:id="@+id/social_manage_panel"
+        android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:title="Import" />
+            android:id="@+id/nav_chat"
+            android:icon="@drawable/ic_chat_black_24dp"
+            android:title="聊天" />
         <item
-            android:id="@+id/nav_gallery"
-            android:title="Gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:title="Tools" />
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="好友" />
     </group>
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:title="Send" />
-        </menu>
-    </item>
+    <group
+        android:id="@+id/chat_panel"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_new_chat"
+            android:icon="@drawable/ic_edit_black_24dp"
+            android:title="新建聊天" />
+        <item
+            android:id="@+id/nav_new_secret_chat"
+            android:icon="@drawable/ic_lock_black_24dp"
+            android:title="新建加密聊天" />
+        <item
+            android:id="@+id/nav_addContact"
+            android:icon="@drawable/ic_person_add_black_24dp"
+            android:title="添加朋友" />
+    </group>
+
+    <group
+        android:id="@+id/settings_panel"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="设置" />
+        <item
+            android:id="@+id/nav_help_and_feedback"
+            android:icon="@drawable/ic_help_black_24dp"
+            android:title="帮助与反馈" />
+    </group>
 </menu>
