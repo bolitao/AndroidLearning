@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/createTableButton"
+        android:id="@+id/createDatabaseButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -15,25 +15,24 @@
         android:layout_marginEnd="8dp"
         android:text="创建数据库"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/add_dataButton"
+        android:id="@+id/addDataButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="增加数据"
-        android:textAllCaps="false"
+        android:text="添加数据"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createTableButton" />
+        app:layout_constraintTop_toBottomOf="@+id/createDatabaseButton" />
 
     <Button
-        android:id="@+id/update_data_button"
+        android:id="@+id/updateDataButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -42,7 +41,7 @@
         android:text="更新数据"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_dataButton" />
+        app:layout_constraintTop_toBottomOf="@+id/addDataButton" />
 
     <Button
         android:id="@+id/deleteDataButton"
@@ -54,7 +53,7 @@
         android:text="删除数据"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/update_data_button" />
+        app:layout_constraintTop_toBottomOf="@+id/updateDataButton" />
 
     <Button
         android:id="@+id/queryDataButton"
