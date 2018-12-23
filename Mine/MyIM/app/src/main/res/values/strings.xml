@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MyIM</string>
+    <string name="message_hint">Message</string>
+    <string name="message_button_description">Send Message</string>
 </resources>

@@ -1,5 +1,6 @@
 package xyz.bolitao.myim;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -15,6 +16,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
+import java.util.Objects;
+
 /**
  * @author Boli Tao
  * @date 2018/12/21
@@ -22,6 +25,7 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout mainDrawerLayout;
     private FloatingActionButton newChatFloatingActionButton;
+    private NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +33,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.main_toolbar);
         setSupportActionBar(toolbar);
-
+        Objects.requireNonNull(getSupportActionBar()).setDisplayShowHomeEnabled(true);
         mainDrawerLayout = findViewById(R.id.main_layout);
-        NavigationView navigationView = findViewById(R.id.main_navigation);
-        newChatFloatingActionButton = findViewById(R.id.new_chat_floating_button);
-
-        navigationView.setNavigationItemSelectedListener(this);
+        initNavigation();
 
         newChatFloatingActionButton.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -43,10 +44,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return false;
             }
         });
+
         newChatFloatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO
+                Intent intent = new Intent(MainActivity.this, ChatActivity.class);
+                startActivity(intent);
             }
         });
     }
@@ -81,6 +84,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         transaction.commit();
     }
 
+
+    private void initNavigation() {
+        navigationView = findViewById(R.id.main_navigation);
+        newChatFloatingActionButton = findViewById(R.id.new_chat_floating_button);
+        navigationView.setCheckedItem(R.id.nav_chat);
+        navigationView.setNavigationItemSelectedListener(this);
+    }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
