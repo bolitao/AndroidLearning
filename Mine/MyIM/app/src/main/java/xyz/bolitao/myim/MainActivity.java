@@ -15,6 +15,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import java.util.Objects;
 
@@ -118,6 +119,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return false;
             case R.id.nav_help_and_feedback:
                 mainDrawerLayout.closeDrawer(GravityCompat.START);
+                Intent intent = new Intent(MainActivity.this, TestActivity.class);
+                startActivity(intent);
                 return false;
             default:
                 return true;
