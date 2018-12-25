@@ -96,15 +96,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()) {
             case R.id.nav_new_chat:
-                mainDrawerLayout.closeDrawer(GravityCompat.START);
+//                mainDrawerLayout.closeDrawer(GravityCompat.START);
+                navigationView.setCheckedItem(R.id.nav_new_chat);
                 return false;
             case R.id.nav_new_secret_chat:
                 mainDrawerLayout.closeDrawer(GravityCompat.START);
                 return false;
             case R.id.nav_chat:
+                navigationView.setCheckedItem(R.id.nav_chat);
                 mainDrawerLayout.closeDrawers();
                 return true;
             case R.id.nav_contact:
+                navigationView.setCheckedItem(R.id.nav_contact);
                 mainDrawerLayout.closeDrawer(GravityCompat.START);
                 return true;
             case R.id.nav_addContact:

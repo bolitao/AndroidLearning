@@ -2,4 +2,14 @@
     <string name="app_name">MyIM</string>
     <string name="message_hint">Message</string>
     <string name="message_button_description">Send Message</string>
+    <string name="nav_chat">聊天</string>
+    <string name="nav_contact">好友</string>
+    <string name="nav_new_chat">新建聊天</string>
+    <string name="nav_new_secret_chat">新建加密聊天</string>
+    <string name="nav_add_friend">添加朋友</string>
+    <string name="settings">设置</string>
+    <string name="help_and_feedback">帮助与反馈</string>
+    <string name="user_id">bolitao</string>
+    <string name="user_name">Boli Tao</string>
+    <string name="user_mail">tblsyx@outlook.com</string>
 </resources>

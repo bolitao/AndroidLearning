@@ -5,8 +5,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.xml.sax.InputSource;
 import org.xml.sax.XMLReader;
 import org.xmlpull.v1.XmlPullParser;
@@ -19,6 +25,7 @@ import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.List;
 
 import javax.xml.parsers.SAXParserFactory;
 
@@ -101,11 +108,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void run() {
                 try {
                     OkHttpClient client = new OkHttpClient();
-                    Request request = new Request.Builder().url("http://192.168.123.72:8080/get_data.xml").build();
+                    Request request = new Request.Builder().url("http://192.168.123.72:8080/j2ee_war_exploded/sql").build();
                     Response response = client.newCall(request).execute();
                     String responseData = response.body().string();
 //                    parseXMLWithPull(responseData);
-                    parseXMLWithSAX(responseData);
+//                    parseXMLWithSAX(responseData);
+//                    parseJSONWithJSONObject(responseData);
+                    parseJSONWithGSON(responseData);
                     showResponse(responseData);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -173,6 +182,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             xmlReader.parse(new InputSource(new StringReader(xmlData)));
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    public void parseJSONWithJSONObject(String jsonData) {
+        try {
+            JSONArray jsonArray = new JSONArray(jsonData);
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                String userId = jsonObject.getString("userId");
+                String friendId = jsonObject.getString("friendId");
+                String becomeFriendDate = jsonObject.getString("becomeFriendDate");
+                Log.d(TAG, "parseJSONWithJSONObject: id" + userId);
+                Log.d(TAG, "parseJSONWithJSONObject: friendID" + friendId);
+                Log.d(TAG, "parseJSONWithJSONObject: date" + becomeFriendDate);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void parseJSONWithGSON(String jsonData) {
+        Gson gson = new Gson();
+        List<Contact> contactList = gson.fromJson(jsonData, new TypeToken<List<Contact>>() {
+        }.getType());
+        for (Contact contact : contactList) {
+            Log.d(TAG, "parseJSONWithGSON: id" + contact.getUserId());
+            Log.d(TAG, "parseJSONWithGSON: friendId" + contact.getFriendId());
+            Log.d(TAG, "parseJSONWithGSON: date" + contact.getBecomeFriendDate());
         }
     }
 }
