@@ -9,7 +9,10 @@
     <string name="nav_add_friend">添加朋友</string>
     <string name="settings">设置</string>
     <string name="help_and_feedback">帮助与反馈</string>
-    <string name="user_id">bolitao</string>
-    <string name="user_name">Boli Tao</string>
-    <string name="user_mail">tblsyx@outlook.com</string>
+    <string name="default_user_id">userId</string>
+    <string name="default_user_name">User Name</string>
+    <string name="default_user_mail">default_user_mail@test.com</string>
+    <string name="default_test_message">A greeting used during the Christmas and winter holiday season to recognize the celebration of many holidays.</string>
+    <string name="default_time">20:18</string>
+    <string name="default_message_count">3</string>
 </resources>
