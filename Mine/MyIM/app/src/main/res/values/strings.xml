@@ -13,6 +13,9 @@
     <string name="default_user_name">User Name</string>
     <string name="default_user_mail">user_mail@test.com</string>
     <string name="default_test_message">A greeting used during the Christmas and winter holiday season to recognize the celebration of many holidays.</string>
-    <string name="default_time">20:18</string>
+    <string name="default_receive_time">20:18</string>
+    <string name="default_send_time">20:20</string>
     <string name="default_message_count">3</string>
+    <string name="default_send_message">Placeholder message</string>
+    <string name="default_receive_message">How are you doing?How are you doing? How are you doing?</string>
 </resources>
