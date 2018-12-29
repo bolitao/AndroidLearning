@@ -1,5 +1,7 @@
 package xyz.bolitao.uibestpractice;
 
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -55,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
 //        msgList.add(msg3);
 //    }
     private List<Msg> msgList = new ArrayList<Msg>();
+
+
 
     private EditText inputText;
 

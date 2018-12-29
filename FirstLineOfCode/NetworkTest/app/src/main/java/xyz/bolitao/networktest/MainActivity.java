@@ -108,13 +108,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void run() {
                 try {
                     OkHttpClient client = new OkHttpClient();
+//                    Request request = new Request.Builder().url("http://192.168.123.72:8080/j2ee_war_exploded/sql").build();
                     Request request = new Request.Builder().url("http://192.168.123.72:8080/j2ee_war_exploded/sql").build();
                     Response response = client.newCall(request).execute();
                     String responseData = response.body().string();
 //                    parseXMLWithPull(responseData);
 //                    parseXMLWithSAX(responseData);
 //                    parseJSONWithJSONObject(responseData);
-                    parseJSONWithGSON(responseData);
+//                    parseJSONWithGSON(responseData);
                     showResponse(responseData);
                 } catch (Exception e) {
                     e.printStackTrace();
