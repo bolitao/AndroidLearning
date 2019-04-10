@@ -24,7 +24,6 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
         Button buttonReceiveData = findViewById(R.id.button_receiveData);
         //只有从 FirstActivity 点击“传递数据”按钮才会有 Toast 显示“这是 FirstActivity 通过 Intent 传递的数据”
-        // TODO: 解决按钮重叠问题
         buttonReceiveData.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

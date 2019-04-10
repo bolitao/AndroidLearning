@@ -92,7 +92,7 @@ public class FirstActivity extends AppCompatActivity {
             }
         });
 
-        Button buttonMoreIntentUsage = (Button) findViewById(R.id.button_more_intent_usage);
+        Button buttonMoreIntentUsage = findViewById(R.id.button_more_intent_usage);
         /*
          调用浏览器
          TODO: 使用 Chrome Custom Tabs
